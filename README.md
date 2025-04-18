@@ -1,7 +1,8 @@
 # Screen Tracker System
 
-## Dependencies
+## External Dependencies
 
 - pandas
 
-work in progress
+## Introduction
+A CLI screen time tracking application that generates focused window activity data in the form of a CSV file.
