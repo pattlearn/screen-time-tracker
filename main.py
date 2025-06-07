@@ -1,6 +1,6 @@
 import os
 import time
-from functions import *
+from utils.utils import *
 
 def test():
     hwnd = get_hwnd()
