@@ -58,9 +58,9 @@ def extract_website_from_title(title):
     # return title.strip()
     
 def log_activity_csv(date, time_hms, application, process, title, hwnd):
-    file_exists = os.path.isfile("record.csv")
+    file_exists = os.path.isfile(f"./records/record_{date}.csv")
     
-    with open("record.csv", mode="a", newline="", encoding="utf-8") as file:
+    with open(f"./records/record_{date}.csv", mode="a", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         
         if not file_exists:

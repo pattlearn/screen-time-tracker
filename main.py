@@ -1,3 +1,4 @@
+import os
 import time
 from functions import *
 
@@ -12,6 +13,8 @@ def test():
     
 
 if __name__ == "__main__":
+    os.makedirs("./records", exist_ok=True)
+    
     while True:
         try:
             time.sleep(1)
