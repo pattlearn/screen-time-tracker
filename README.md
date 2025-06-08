@@ -14,6 +14,7 @@ A simple Python-based screen time monitoring tool that logs the active window's 
   - `process_name`
   - `title`
   - `hwnd` (window handle)
+- Automatically send the activity log via email
 
 ## Usage
 
