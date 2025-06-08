@@ -1,6 +1,7 @@
 import os
 import time
 from utils.utils import *
+from utils.emailing import *
 
 def test():
     hwnd = get_hwnd()
@@ -13,7 +14,19 @@ def test():
     
 
 if __name__ == "__main__":
-    os.makedirs("./records", exist_ok=True)
+    directory = "./records"
+    os.makedirs(directory, exist_ok=True)
+    
+    # send the file via email
+    date = get_date()
+    if check_sending() > 0:
+        folder_path = directory
+        files = [file for file in os.listdir(folder_path)]
+        
+        for filename in files:
+            date = filename.replace("record_", "").replace(".csv", "")
+            send_email(filename=filename, date=date, folder_path=folder_path)
+            remove_file(filename=filename)
     
     while True:
         try:
